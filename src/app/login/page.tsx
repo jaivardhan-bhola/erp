@@ -1,14 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 const Login = ({searchParams}: {searchParams:{user:string}}) => {
   const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const handleLogin = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        if (username === "crispr" && password === "crispr" && searchParams.user === "fa") {
+        if (username === "crispr" && password === "crispr" && searchParams.user === "fa") 
           window.location.href = "/dashboardfa";
-        }
+        else if (username === "crispr" && password === "crispr" && searchParams.user === "faculty") window.location.href = "/dashboardfac";
         else console.log("Invalid credentials");
 };
 const handleUsername = (e: React.ChangeEvent<HTMLInputElement>) => {

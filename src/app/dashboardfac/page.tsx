@@ -1,41 +1,36 @@
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
 
-const DashboardFA = () => {
+const DashboardFac = () => {
   return (
     <>
       <div className="grid grid-cols-[minmax(20%,20%)_auto] h-screen overflow-y-hidden">
       <div className="top-0 left-0 m-0 flex flex-col bg-black text-white shadow-lg w-16 h-lvh">
-        <a href="/dashboardfa">
+        <a href="/dashboardfac">
         <div className="group grid">
         <div className="relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-white hover:bg-green-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer"><Image src={require('../assets/crispr.png')} className="h-10 w-10" alt="logo"/></div>
         <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Home</span>
         </div>
         </a>
-        <a href="/co">
+        <a href="/cg">
         <div className="group grid">
         <div className="relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-white hover:bg-green-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer"><Image src={require('../assets/fa.png')} className="h-6 w-6" alt="logo"/></div>
-        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Course Occurence</span>
+        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Create Grades</span>
         </div>
         </a>
-        <a href="/gradesfa">
+        <a href="/evalfac">
         <div className="group grid">
         <div className="relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-white hover:bg-green-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer"><Image src={require('../assets/faculty.png')} className="h-6 w-6" alt="logo"/></div>
-        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Grades</span>
+        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Evaluation</span>
         </div>
         </a>
-        <a href="/ff">
+        <a href="/marksfac">
         <div className="group grid">
         <div className="relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-white hover:bg-green-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer"><Image src={require('../assets/student.png')} className="h-6 w-6" alt="logo"/></div>
-        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Failed Students</span>
-        </div>
-        </a>
-        <a href="/profs">
-        <div className="group grid">
-        <div className="relative flex items-center justify-center h-10 w-10 mt-2 mb-2 mx-auto shadow-lg bg-white hover:bg-green-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer"><Image src={require('../assets/faculty.png')} className="h-6 w-6" alt="logo"/></div>
-        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Professors</span>
+        <span className="absolute w-auto p-2 my-2 min-w-max left-20 rounded-md shadow-md text-black bg-white text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">Marks</span>
         </div>
         </a>
         <a href="/" className="mt-auto">
@@ -112,7 +107,7 @@ const DashboardFA = () => {
               />
             </svg>
           </div>
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-5 lg:grid-cols-3">
 
             <div className="relative flex flex-col sm:w-[15rem] rounded-lg border-gray-400 bg-white shadow-lg px-4">
               <div className="flex-auto p-6">
@@ -123,11 +118,11 @@ const DashboardFA = () => {
                     <Link
                       className="inline-block w-9/10 cursor-pointer select-none rounded-md border border-black bg-black py-2 px-5 text-center align-middle text-xs text-white shadow hover:border-indigo- 600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600 focus:bg-indigo-600 focus:text-white focus:shadow-none"
                       href={{
-                        pathname: "/co",
+                        pathname: "/cg",
                       }
                       }
                     >
-                     Course Occurence
+                     Create Grades
                     </Link>
                 </div>
               </div>
@@ -141,11 +136,11 @@ const DashboardFA = () => {
                     <Link
                       className="inline-block w-9/10 cursor-pointer select-none rounded-md border border-black bg-black py-2 px-5 text-center align-middle text-xs text-white shadow hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600 focus:bg-indigo-600 focus:text-white focus:shadow-none"
                       href={{
-                        pathname: "/gradesfa",
+                        pathname: "/evalfac",
                       }
                       }
                     >
-                      Grades
+                      Evaluation
                     </Link>
                 </div>
               </div>
@@ -159,33 +154,16 @@ const DashboardFA = () => {
                     <Link
                       className="inline-block w-9/10 cursor-pointer select-none rounded-md border border-black bg-black py-2 px-5 text-center align-middle text-xs text-white shadow hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600 focus:bg-indigo-600 focus:text-white focus:shadow-none"
                       href={{
-                        pathname: "/ff",
+                        pathname: "/marksfac",
                       }
                       }
                     >
-                     Failed Students
+                     Marks
                     </Link>                
                 </div>
               </div>
             </div>
-            <div className="relative flex flex-col sm:w-[15rem] rounded-lg border-gray-400 bg-white shadow-lg px-4">
-              <div className="flex-auto p-6">
-                <div className="mb-10 flex flex-shrink-0 flex-grow-0 items-center justify-center overflow-hidden">
-                <Image src={require("../assets/student.png")} className="object-contain w-20 h-20" alt={"Student"}/>
-                </div>
-                <div className="mb-4 flex justify-center">
-                    <Link
-                      className="inline-block w-9/10 cursor-pointer select-none rounded-md border border-black bg-black py-2 px-5 text-center align-middle text-xs text-white shadow hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600 focus:bg-indigo-600 focus:text-white focus:shadow-none"
-                      href={{
-                        pathname: "/profs",
-                      }
-                      }
-                    >
-                     Professors
-                    </Link>                
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -195,4 +173,4 @@ const DashboardFA = () => {
   );
 }
 
-export default DashboardFA;
+export default DashboardFac;
