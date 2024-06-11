@@ -15,11 +15,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors:{
-        "background": "slate-200",
+        "background": "#cbd5e1",
         "navbar-bg": "black",
         "navbar-text": "white",
         "card-bg": "white",
         "card-text": "black",
+        "button-cancel" : "#ef4444",
+        "button-cancel-text": "white",
+        "button-submit": "#22c55e",
+        "button-submit-text": "black",
+
       }
     },
   },
