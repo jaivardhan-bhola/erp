@@ -39,6 +39,7 @@ const FADashboard = () => {
             setViewGrade(true);
         }, 5000);
     }
+
     interface Course {
         code: string;
         name: string;
@@ -272,6 +273,7 @@ const FADashboard = () => {
             <div className="flex flex-col justify-center items-center h-full bg-card-bg rounded-lg shadow-xl">
                 <button className="text-l font-bold text-white bg-black rounded-lg w-fit p-5"onClick={() => window.location.href='/results'} >STUDENT RESULTS</button>
                 </div>
+                
                 <div className="flex flex-col justify-center items-center h-full bg-card-bg rounded-lg shadow-xl">
                 <button className="text-l font-bold text-white bg-black rounded-lg w-fit p-5" onClick={()=>setGenerateGrade(true)}>LOCK MARKS AND<br/>GENERATE GRADE</button>
                 <CreateModal open={generateGrade} onClose={()=> setGenerateGrade(false)}>
