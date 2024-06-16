@@ -1,5 +1,7 @@
 "use client";
 import React, {useState} from "react";
+import Image from 'next/image'
+import Navbar from "@/components/Navbar Faculty/Navbar Faculty"
 
 interface StudentData {
   id: number;
@@ -7,7 +9,7 @@ interface StudentData {
   section: string;
   s1: integer;
   s2: integer;
-  es: integer;
+  es: integer;  
   ta: integer;
   lab: integer;
   total: integer;
@@ -356,19 +358,18 @@ const Marks = () => {
 
     return(
         <>
-        <div className="grid grid-cols-[25%_auto_auto] h-screen overflow-y-hidden gap-5 p-5 bg-background">
+        <div className="grid grid-cols-[20%_auto_auto] h-screen overflow-y-hidden gap-5 p-5 bg-background">
 
           
-          <div className="flex flex-col items-center justify-center h-relative min-h-screen bg-black rounded-[15px] row-span-3 text-white w-[392px] pt-8">
+          <div className="flex flex-col items-center justify-center h-relative min-h-screen bg-black rounded-[15px] row-span-3 text-white w-[292px] pt-8">
                 <div className="flex flex-col items-center mb-8">
                     <div className="text-lg font-semibold">Dr. Nishant Namdev</div>
                     <div className="text-sm text-gray-400">Adjacent Faculty</div>
                 </div>
                 
-        <div className="mb-8">
-          <img src="iiitn.png" alt="IIITN Logo" className="mb-4" />
-          
-        </div>
+                <div className="mb-8">
+                        <Image src={require("/public/iiitn.png")} className="object-contain w-20 h-20" alt={"Student"}/>
+                </div>
 
         <div className="flex flex-col items-center mb-8 text">
             <div className="mb-8">

@@ -2,44 +2,14 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Navbar from "@/components/Navbar Faculty/Navbar Faculty"
 
 const Cutoff = () => {
 
   return (
     <div className="bg-[#e6e6e6] h-auto flex">
-      <div className="bg-black text-white w-[392px] h-relative min-h-screen flex flex-col items-center pt-4 m-8 rounded-[15px]">
-        
-        <div className="flex flex-col items-center mb-8">
-          <div className="text-lg font-semibold">Dr. Nishant Namdev</div>
-          <div className="text-sm text-gray-400">Adjacent Faculty</div>
-        </div>
-                
-        <div className="mb-8">
-          <Image src={require("./iiitn.png")} className="object-contain w-20 h-20 mb-4 align-middle" alt={"IIITN Logo"}/>
-        </div>
 
-        <div className="flex flex-col items-center mb-8 text">
-            <div className="mb-8">
-                <div className="text-center">All Courses</div>
-            </div>
-            <div className="mb-8">
-                <div className="text-center">Course Dashboard</div>
-            </div>
-            <div className="mb-8">
-                <div className="text-center">Cut-Off</div>
-            </div>
-            <div className="mb-8">
-                <div className="text-center">Mark Evaluation</div>
-            </div>
-        </div>
-
-        <div className="mt-auto mb-8">
-          <div className="bg-white text-black rounded-full w-32 h-12 flex items-center justify-center">
-            Logout
-          </div>
-        </div>
-        <div className="text-center text-sm mb-auto">&copy; 2024 IIITN ERP</div>
-      </div>
+      <Navbar/>
 
       <div className="flex flex-col justify-between w-full p-8">
         <div className="flex flex-row justify-between w-20% ">
