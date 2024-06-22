@@ -352,14 +352,12 @@ const Marks = () => {
         console.error("Error while saving data:", error);
       }
     }
-
     setEditMode(null);
   };
 
     return(
         <>
         <div className="grid grid-cols-[20%_auto_auto] h-screen overflow-y-hidden gap-5 p-5 bg-background">
-
           
           <div className="flex flex-col items-center justify-center h-relative min-h-screen bg-black rounded-[15px] row-span-3 text-white w-[292px] pt-8">
                 <div className="flex flex-col items-center mb-8">
@@ -393,15 +391,10 @@ const Marks = () => {
         </div>
         <div className="text-center text-sm mb-auto">&copy; 2024 IIITN ERP</div>
         </div>
-
           <div className="bg-card-bg rounded-lg col-span-2 min-h-full">
             <div className="grid grid-cols-5 gap-5 h-full">
               <div className="rounded-lg h-0 min-h-full col-span-2 p-5">
-                
-              <button className="text-white font-bold w-7 h-7 bg-navbar-bg rounded-full absolute right-2 top-2" onClick={()=> window.location.href='/faculty_coursedashboard'}>X</button>
-
                 <h1 className="text-xl font-bold text-card-text pb-5">Final Result overview</h1>
-                
                 <div className="rounded-lg bg-navbar-bg h-fit p-5 text-navbar-text">
                   <h1 className="text-xl font-bold pb-5">Highest Marks = 580 (BT23CSD066)</h1>
                   <h1 className="text-xl font-bold ">Highest Marks = 420 (BT23CSD063)</h1>

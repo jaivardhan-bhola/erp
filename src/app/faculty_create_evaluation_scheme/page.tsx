@@ -4,9 +4,16 @@ import React, {useState} from "react";
 import Image from "next/image";
 import { extname } from "path";
 import CreateModal from "../createModal";
+import { useForm } from "react-hook-form";
 import Navbar from "@/components/Navbar Faculty/Navbar Faculty"
 
 const Cutoff = () => {
+    const { register, handleSubmit } = useForm();
+    const [data, setData] = useState("");
+  
+    const onSubmit = (data) => {
+      setData(data)
+    }
 
     const [isPopupVisible, setPopupVisible] = useState(false);
 
@@ -67,10 +74,12 @@ const Cutoff = () => {
                                             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                                                 <div className="bg-white p-8 rounded shadow-lg">
                                                 <h2 className="text-center text-xl mb-4">Marks Left : 20</h2>
-                                                <form className="space-y-4">
-                                                    <input type="text" placeholder="Name" className="w-full border border-gray-400 p-2 rounded" />
-                                                    <input type="number" placeholder="Marks" className="w-full border border-gray-400 p-2 rounded" />
-                                                    <div className="flex justify-between mt-4">
+                                                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-1 flex-col justify-evenly">
+                                                <div className="flex flex-col">
+                                                  <input className="border-2 outline-none p-2 rounded-md m-4" placeholder="Type" {...register("type")}/>
+                                                  <input className="border-2 outline-none p-2 rounded-md m-4" placeholder="Marks" {...register("marks")}/>
+                                                </div>
+                                                <div className="flex justify-between mt-4">
                                                     <button 
                                                         type="button" 
                                                         className="bg-red-500 text-white px-4 py-2 rounded"
@@ -78,14 +87,20 @@ const Cutoff = () => {
                                                     >
                                                         Cancel
                                                     </button>
-                                                    <button 
-                                                        type="submit" 
-                                                        className="bg-green-500 text-white px-4 py-2 rounded"
-                                                    >
-                                                        Add
+                                                    <button className=" flex justify-center p-2 rounded-md w-1/2 self-center bg-green-500  text-white hover:bg-gray-800" type='submit'>
+                                                        <span>
+                                                            Submit
+                                                        </span> 
                                                     </button>
                                                     </div>
                                                 </form>
+                                                
+                                                <div className='h-4'>  
+                                                    <p> 
+                                                      Data: {JSON.stringify(data)}
+                                                    </p> 
+                                                </div>
+                                                
                                                 </div>
                                             </div>
                                             )}

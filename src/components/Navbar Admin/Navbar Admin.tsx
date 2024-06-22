@@ -5,8 +5,8 @@ import Image from 'next/image';
 const Navbar = ({ pageid }) => (        
             <div className="bg-black text-white w-auto h-auto flex flex-col items-center pt-4 m-8 rounded-[15px] sticky">
                         <div className="flex flex-col items-center mb-8">
-                            <div className="text-lg font-semibold">Dr. Nishant Namdev</div>
-                            <div className="text-sm text-gray-400">Adjacent Faculty</div>
+                            <div className="text-lg font-semibold">Dr. Sameer</div>
+                            <div className="text-sm text-gray-400">Admin</div>
                         </div>
                         
                         <div className="mb-8">
@@ -17,32 +17,32 @@ const Navbar = ({ pageid }) => (
                             <div className=" flex flex-row mb-8 hover:bg-gray-100 hover:text-black rounded-[25px] px-8 py-1">
                                     <Image src={require("/public/All Courses.svg")} className="object-contain w-4 h-4" alt={"Student"}/>
                                     <div className="px-2">
-                                        <button onClick={() => window.location.href='/faculty_homescreen'} >
-                                            All Courses
+                                        <button onClick={() => window.location.href='/admin_homescreen'} >
+                                            Dashboard
                                         </button>
                                     </div>
                             </div>
                             <div className="flex flex-row mb-8 hover:bg-gray-100 hover:text-black rounded-[25px] px-8 py-1">
                                     <Image src={require("/public/Faculty Course Dashboard.svg")} className="object-contain w-4 h-4"/>
                                     <div className="px-2">
-                                        <button onClick={() => window.location.href='/faculty_coursedashboard'} >
-                                            Course Dashboard
+                                        <button onClick={() => window.location.href='/admin_manage_semesters'} >
+                                            Manage Semester
                                         </button>
                                     </div>
                             </div>
                             <div className="mb-8 hover:bg-gray-100 hover:text-black rounded-[25px] px-8 py-1">
-                                    <button onClick={() => window.location.href='/faculty_cutoff'} >
-                                        Cut-Off
+                                    <button onClick={() => window.location.href='/admin_manage_faculties'} >
+                                        Manage Faculty
                                     </button>
                             </div>
                             <div className="mb-8 hover:bg-gray-100 hover:text-black rounded-[25px] px-8 py-1">
-                                    <button onClick={() => window.location.href='/faculty_marks_evaluation'} >
-                                        Mark Evaluation
+                                    <button onClick={() => window.location.href='/admin_manage_courses'} >
+                                        Manage Courses
                                     </button>
                             </div>
                             <div className="mb-8 hover:bg-gray-100 hover:text-black rounded-[25px] px-8 py-1">
-                                    <button onClick={() => window.location.href='/faculty_create_evaluation_scheme'} >
-                                        Create Evaluation Scheme
+                                    <button onClick={() => window.location.href='/admin_homescreen'} >
+                                        Settings
                                     </button>
                             </div>
                         </div>

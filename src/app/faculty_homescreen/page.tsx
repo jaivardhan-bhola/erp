@@ -74,15 +74,15 @@ const FacultyHomeScreen = () => {
   ];
 
   return (
-    <div className="bg-[#e6e6e6] h-auto flex">
+    <div className="bg-[#e6e6e6] h-auto flex flex-row">
 
       <Navbar/>
       
-      <div className="flex flex-col items-center w-full p-4">
-        {courses.map((course, index) => (
-          <CourseCard key={index} {...course} />
-        ))}
-      </div>
+        <div className="flex flex-col items-center w-[80%] p-4">
+          {courses.map((course, index) => (
+            <CourseCard key={index} {...course} />
+          ))}
+        </div>
     </div>
   );
 };
