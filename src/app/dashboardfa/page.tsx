@@ -39,6 +39,7 @@ const FADashboard = () => {
             setViewGrade(true);
         }, 5000);
     }
+
     interface Course {
         code: string;
         name: string;
@@ -98,9 +99,11 @@ const FADashboard = () => {
     return (
         <>
          <div className="grid grid-cols-[25%_auto_auto_auto] h-screen overflow-y-hidden gap-5 p-5 bg-background">
-            <div className="flex flex-col items-center justify-center h-full bg-navbar-bg rounded-lg row-span-2">
-                <h1 className="text-4xl font-bold text-navbar-text ">Dashboard FA</h1>
+
+                <div className="flex flex-col items-center justify-center h-full bg-navbar-bg rounded-lg row-span-2">
+                    <h1 className="text-4xl font-bold text-navbar-text ">Dashboard FA</h1>
                 </div>
+
             <div className="flex flex-col items-center justify-center h-full bg-card-bg rounded-lg col-span-3">
                 <div className="grid grid-cols-9 h-full w-full gap-2 pt-5 px-7 sm:grid-cols-3">
                     <div className="rounded-lg">
@@ -272,6 +275,7 @@ const FADashboard = () => {
             <div className="flex flex-col justify-center items-center h-full bg-card-bg rounded-lg shadow-xl">
                 <button className="text-l font-bold text-white bg-black rounded-lg w-fit p-5"onClick={() => window.location.href='/results'} >STUDENT RESULTS</button>
                 </div>
+                
                 <div className="flex flex-col justify-center items-center h-full bg-card-bg rounded-lg shadow-xl">
                 <button className="text-l font-bold text-white bg-black rounded-lg w-fit p-5" onClick={()=>setGenerateGrade(true)}>LOCK MARKS AND<br/>GENERATE GRADE</button>
                 <CreateModal open={generateGrade} onClose={()=> setGenerateGrade(false)}>

@@ -10,6 +10,12 @@ const Login = () => {
     if (username === "fa" && password === "fa") {
       window.location.href = "/dashboardfa";
     }
+    else if(username === "faculty" && password === "faculty") {
+      window.location.href = "/faculty_homescreen";
+    }
+    else if(username === "admin" && password === "admin") {
+      window.location.href = "/admin_homescreen";
+    }
   };
   const handleUsername = (e: React.FormEvent<HTMLInputElement>) => {
     setUsername(e.currentTarget.value);
